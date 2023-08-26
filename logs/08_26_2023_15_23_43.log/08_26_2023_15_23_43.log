@@ -1,0 +1,6 @@
+[ 2023-08-26 15:23:45,525 ] 23 root - INFO - Data ingestion is initiated
+[ 2023-08-26 15:23:45,832 ] 27 root - INFO - Data read as dataframe
+[ 2023-08-26 15:23:47,681 ] 33 root - INFO - Data saved in file raw.csv
+[ 2023-08-26 15:23:47,681 ] 35 root - INFO - Data splited into training and testing
+[ 2023-08-26 15:23:49,250 ] 40 root - INFO - Training data is saved in train.csv
+[ 2023-08-26 15:23:49,741 ] 42 root - INFO - Testing data is saved in test.csv
