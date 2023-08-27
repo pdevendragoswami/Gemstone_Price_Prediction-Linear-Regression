@@ -1,0 +1,36 @@
+[ 2023-08-27 11:04:02,088 ] 23 root - INFO - Data ingestion is initiated
+[ 2023-08-27 11:04:02,364 ] 27 root - INFO - Data read as dataframe
+[ 2023-08-27 11:04:04,304 ] 33 root - INFO - Data saved in file raw.csv
+[ 2023-08-27 11:04:04,304 ] 35 root - INFO - Data splited into training and testing
+[ 2023-08-27 11:04:05,768 ] 40 root - INFO - Training data is saved in train.csv
+[ 2023-08-27 11:04:06,214 ] 42 root - INFO - Testing data is saved in test.csv
+[ 2023-08-27 11:04:06,220 ] 66 root - INFO - Data transformation is initiated
+[ 2023-08-27 11:04:06,220 ] 68 root - INFO - Reading testing and training data
+[ 2023-08-27 11:04:06,501 ] 72 root - INFO - Data reading completed successfully
+[ 2023-08-27 11:04:06,510 ] 34 root - INFO - Pipeline creation is initiated
+[ 2023-08-27 11:04:06,511 ] 57 root - INFO - Pipeline creation is done successfully
+[ 2023-08-27 11:04:07,066 ] 91 root - INFO - Data transformation is completed
+[ 2023-08-27 11:04:07,066 ] 12 root - INFO - Save Obj is initiated
+[ 2023-08-27 11:04:07,067 ] 20 root - INFO - Obj is saved
+[ 2023-08-27 11:04:07,067 ] 97 root - INFO - Pickle file saved.
+[ 2023-08-27 11:04:07,075 ] 21 root - INFO - Spliting the data into train and test
+[ 2023-08-27 11:04:07,075 ] 32 root - INFO - Checking for model report
+[ 2023-08-27 11:04:07,075 ] 29 root - INFO - Model Evaluation is started
+[ 2023-08-27 11:04:07,075 ] 34 root - INFO - Model fitted
+[ 2023-08-27 11:04:07,221 ] 38 root - INFO - Model has predicted y
+[ 2023-08-27 11:04:07,223 ] 41 root - INFO - Model checked the accuracy
+[ 2023-08-27 11:04:07,224 ] 34 root - INFO - Model fitted
+[ 2023-08-27 11:06:35,953 ] 38 root - INFO - Model has predicted y
+[ 2023-08-27 11:06:35,956 ] 41 root - INFO - Model checked the accuracy
+[ 2023-08-27 11:06:35,956 ] 34 root - INFO - Model fitted
+[ 2023-08-27 11:06:36,229 ] 38 root - INFO - Model has predicted y
+[ 2023-08-27 11:06:36,232 ] 41 root - INFO - Model checked the accuracy
+[ 2023-08-27 11:06:36,232 ] 34 root - INFO - Model fitted
+[ 2023-08-27 11:06:43,575 ] 38 root - INFO - Model has predicted y
+[ 2023-08-27 11:06:43,578 ] 41 root - INFO - Model checked the accuracy
+[ 2023-08-27 11:06:43,578 ] 35 root - INFO - Model accuracy report obtained
+[ 2023-08-27 11:06:43,578 ] 36 root - INFO - {'LinearRegression': 0.936729558744127, 'Lasso': 0.9370467381780303, 'Ridge': 0.9367264155270141, 'ElasticNet': 0.8539435628738254}
+[ 2023-08-27 11:06:43,578 ] 48 root - INFO - Best model found: Lasso, Best model accuracy:0.9370467381780303
+[ 2023-08-27 11:06:43,578 ] 12 root - INFO - Save Obj is initiated
+[ 2023-08-27 11:06:43,579 ] 20 root - INFO - Obj is saved
+[ 2023-08-27 11:06:43,579 ] 57 root - INFO - Best Model obj is saved
