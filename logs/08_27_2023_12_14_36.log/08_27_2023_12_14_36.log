@@ -1,0 +1,40 @@
+[ 2023-08-27 12:14:37,776 ] 187 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+[ 2023-08-27 12:14:37,776 ] 187 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-08-27 12:14:45,733 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:14:45] "GET / HTTP/1.1" 200 -
+[ 2023-08-27 12:14:46,927 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:14:46] "GET / HTTP/1.1" 200 -
+[ 2023-08-27 12:15:16,618 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:15:16] "GET / HTTP/1.1" 200 -
+[ 2023-08-27 12:15:22,048 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:15:22] "GET /predict HTTP/1.1" 200 -
+[ 2023-08-27 12:15:57,655 ] 75 root - INFO - THere is some issue at get data as dataframe
+[ 2023-08-27 12:15:57,655 ] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 67, in get_data_as_dataframe
+    df = pd.DataFrame(custom_data_input_dict)
+NameError: name 'pd' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 31, in predict_datapoint
+    final_data = data.get_data_as_dataframe()
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 76, in get_data_as_dataframe
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [/config/workspace/src/pipelines/prediction_pipeline.py] line number [67] error message [name 'pd' is not defined]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 40, in predict_datapoint
+    logging.info('There is some issue at predict_datapoint')
+NameError: name 'logging' is not defined
+[ 2023-08-27 12:15:57,657 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:15:57] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

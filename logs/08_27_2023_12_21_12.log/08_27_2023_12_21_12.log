@@ -1,0 +1,8 @@
+[ 2023-08-27 12:21:13,666 ] 187 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+[ 2023-08-27 12:21:13,666 ] 187 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-08-27 12:21:17,883 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:21:17] "GET /predict HTTP/1.1" 200 -
+[ 2023-08-27 12:21:31,790 ] 70 root - INFO - Data converted into DF
+[ 2023-08-27 12:21:31,859 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:21:31] "POST /predict HTTP/1.1" 200 -

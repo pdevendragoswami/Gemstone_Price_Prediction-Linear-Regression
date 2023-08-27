@@ -48,3 +48,12 @@ def evaluation_metrics(models,X_train,X_test,y_train,y_test):
     except Exception as e:
         logging.info('There is some issue at evaluation metrics')
         raise CustomException(e,sys)
+
+def load_obj(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+
+    except Exception as e:
+        logging.info('There is some issue at load_obj')
+        raise CustomException(e,sys)

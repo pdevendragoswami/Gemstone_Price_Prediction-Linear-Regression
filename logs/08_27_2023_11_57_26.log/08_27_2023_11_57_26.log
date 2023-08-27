@@ -1,0 +1,48 @@
+[ 2023-08-27 11:57:28,446 ] 187 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+[ 2023-08-27 11:57:28,446 ] 187 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-08-27 11:57:35,044 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 10, in home
+    return render_templates('index.html')
+NameError: name 'render_templates' is not defined
+[ 2023-08-27 11:57:35,046 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 11:57:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-27 11:57:35,093 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 11:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-08-27 11:57:37,126 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 10, in home
+    return render_templates('index.html')
+NameError: name 'render_templates' is not defined
+[ 2023-08-27 11:57:37,127 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 11:57:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[ 2023-08-27 11:57:49,243 ] 1414 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 10, in home
+    return render_templates('index.html')
+NameError: name 'render_templates' is not defined
+[ 2023-08-27 11:57:49,244 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 11:57:49] "[35m[1mGET / HTTP/1.1[0m" 500 -

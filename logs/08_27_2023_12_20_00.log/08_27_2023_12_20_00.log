@@ -1,0 +1,72 @@
+[ 2023-08-27 12:20:01,837 ] 187 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.12:5000
+[ 2023-08-27 12:20:01,837 ] 187 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-08-27 12:20:08,626 ] 70 root - INFO - Data converted into DF
+[ 2023-08-27 12:20:08,627 ] 29 root - INFO - There is some issue at predict values
+[ 2023-08-27 12:20:08,627 ] 41 root - INFO - There is some issue at predict_datapoint
+[ 2023-08-27 12:20:08,627 ] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 14, in predict_value
+    preprocessor_path = os.join.path('artifacts','preprocessor.pkl')
+AttributeError: module 'os' has no attribute 'join'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 34, in predict_datapoint
+    pred_value = predict_pipeline_obj.predict_value(final_data)
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 30, in predict_value
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [/config/workspace/src/pipelines/prediction_pipeline.py] line number [14] error message [module 'os' has no attribute 'join']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 42, in predict_datapoint
+    raise CustomException(e,sys)
+NameError: name 'sys' is not defined
+[ 2023-08-27 12:20:08,628 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:20:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[ 2023-08-27 12:20:10,844 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:20:10] "GET /predict HTTP/1.1" 200 -
+[ 2023-08-27 12:20:23,289 ] 70 root - INFO - Data converted into DF
+[ 2023-08-27 12:20:23,289 ] 29 root - INFO - There is some issue at predict values
+[ 2023-08-27 12:20:23,289 ] 41 root - INFO - There is some issue at predict_datapoint
+[ 2023-08-27 12:20:23,290 ] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 14, in predict_value
+    preprocessor_path = os.join.path('artifacts','preprocessor.pkl')
+AttributeError: module 'os' has no attribute 'join'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 34, in predict_datapoint
+    pred_value = predict_pipeline_obj.predict_value(final_data)
+  File "/config/workspace/src/pipelines/prediction_pipeline.py", line 30, in predict_value
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [/config/workspace/src/pipelines/prediction_pipeline.py] line number [14] error message [module 'os' has no attribute 'join']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 42, in predict_datapoint
+    raise CustomException(e,sys)
+NameError: name 'sys' is not defined
+[ 2023-08-27 12:20:23,290 ] 187 werkzeug - INFO - 172.18.0.2 - - [27/Aug/2023 12:20:23] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
