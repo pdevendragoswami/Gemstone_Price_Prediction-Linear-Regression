@@ -110,10 +110,5 @@ class DataTransformation:
             logging.info('There is some issue in initiate data transformation')
             raise CustomException(e,sys)
 
-if __name__ == "__main__":
-    data_ingestion_obj = DataIngestion()
-    train_data_path,test_data_path = data_ingestion_obj.initiate_data_ingestion()
-    data_transfomation_obj = DataTransformation()
-    data_transfomation_obj.initiate_data_transformation(train_data_path,test_data_path)
 
 
